@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
+
+/* Enhanced Hero Section */
+.gallery-hero {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../../assets/gallery.webp') no-repeat center center/cover;
+  height: 450px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8); /* Add depth */
+}
+
+.gallery-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  max-width: 800px; /* Limit width for better text readability */
+  margin: 0 auto;
+}
+
+.gallery-hero-content h1 {
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  color: #FF6347;
+  margin-bottom: 20px;
+  font-family: 'Baskervville', serif;
+  font-weight: 700;
+}
+
+.gallery-hero-content p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #ddd;
+  line-height: 1.5;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Button Style */
+.gallery-hero-content .gallery-button {
+  background-color: #d4af37; /* Gold color */
+  color: #fff;
+  padding: 12px 30px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.gallery-hero-content .gallery-button:hover {
+  background-color: #c09a2a; /* Darker gold on hover */
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-hero {
+    height: 350px;
+  }
+
+  .gallery-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .gallery-hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .gallery-hero-content .gallery-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+.gallery-caption {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: -20px;
+  font-family: "Baskervville", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.gallery-section {
+  margin: 20px;
+  text-align: center;
+}
+
+/* Media grid for both images and videos */
+.media-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  gap: 10px; /* Space between items */
+  justify-content: start; /* Align items to the start */
+}
+
+.media-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 250px; /* Fixed height for all media cards */
+  flex-grow: 1; /* Allows the card to grow to fill available space */
+  border-radius: 0;
+}
+
+.media-card img, .media-card video {
+  height: 100%;
+  width: auto; /* Auto width to maintain aspect ratio */
+  min-width: 100%; /* Ensure at least full width of the card */
+  object-fit: cover; /* Cover the area nicely */
+}
+
+.media-card:hover img, .media-card:hover video {
+  transform: scale(1.1);
+}
+
+.gallery-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.gallery-modal-content {
+  position: relative;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gallery-modal-close-btn {
+  position: absolute;
+  top: 10px; /* Position from the top of the modal */
+  right: 10px; /* Position from the right of the modal */
+  cursor: pointer;
+  font-size: 24px; /* Size of the close button */
+  color: #Fff; /* Color of the close button */
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.gallery-modal-nav-btn {
+  position: absolute;
+  top: 50%; /* Center vertically in relation to the modal */
+  transform: translateY(-50%); /* Offset the button by half its height to truly center it */
+  font-size: 24px; /* Size of the icons */
+  color: #fff; /* Color of the icons */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px; /* Add some padding for easier clicking */
+}
+
+.gallery-modal-nav-btn-prevbtn {
+  position: absolute;
+  left: 0; /* Aligns the button to the far left of the modal */
+  top: 50%; /* Centers vertically */
+  transform: translateY(-50%);
+  font-size: 24px; /* Size of the icons */
+  color: #fff; /* Color of the icons */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px; /* Adjusts the position to truly center vertically */
+}
+
+.gallery-modal-nav-btn-nextbtn {
+  position: absolute;
+  right: 0; /* Aligns the button to the far right of the modal */
+  top: 50%; /* Centers vertically */
+  transform: translateY(-50%);
+  font-size: 24px; /* Size of the icons */
+  color: #fff; /* Color of the icons */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px; /* Adjusts the position to truly center vertically */
+}
+
+.gallery-modal-image {
+  max-width: 90%; /* Adjust based on your needs */
+  max-height: 80vh;
+}
+
+.gallery-modal-video {
+  max-width: 90%;
+  max-height: 80vh;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .gallery-modal-content {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .gallery-modal-nav-btn-prevbtn {
+    font-size: 20px;
+    left: -8px;
+  }
+  .gallery-modal-nav-btn-nextbtn {
+    font-size: 20px;
+    right: -8px;
+  }
+
+  .gallery-modal-close-btn {
+    font-size: 20px;
+    top: -2px;
+    right: -2px;
+  }
+}
+
+/* Testimonials section */
+.Gallery-testimonials-section {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.Gallery-testimonials-section .testimonials-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.Gallery-testimonials-section .testimonial-image:after {
+  display: none;
+}
+
+.Gallery-testimonials-section .testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.Gallery-testimonials-section .testimonial-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  text-align: left;
+  padding: 20px;
+}
+
+.Gallery-testimonials-section .testimonial-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.Gallery-testimonials-section .testimonial-image {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 15px;
+}
+
+.Gallery-testimonials-section .testimonial-content {
+  padding: 15px;
+}
+
+.Gallery-testimonials-section .testimonial-feedback {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.Gallery-testimonials-section .testimonial-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+.top-bar {
+    background-color: #6abbe7; /* Light gray */
+    color: #2d3436; /* Dark gray */
+    padding: 10px 0;
+    margin-bottom: 1rem;
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Center the content with max width */
+    margin: 0 auto;
+    padding: 0 15px;
+    font-family: "Mukta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.top-bar-left {
+    font-weight: 700;
+    text-align: center;
+    font-size: 16px; /* Slightly smaller font size */
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    font-size: 16px; /* Slightly smaller font size */
+}
+
+.contact-link {
+    color: #2d3436; /* Dark gray */
+    text-decoration: none;
+    font-weight: 700; /* Adjust font weight */
+    margin-left: 5px; /* Spacing between links */
+}
+
+.contact-link:hover {
+    color: #914F1E; /* Underline on hover */
+}
+
+.contact-icon {
+    margin-right: 8px;
+    color: #914F1E; /* Icon color */
+}
+
+/* Responsive design for TopBar */
+@media (max-width: 768px) {
+    .top-bar .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-bar-right {
+        margin-top: 10px;
+    }
+}

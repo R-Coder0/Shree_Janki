@@ -1,0 +1,75 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.modal-content img {
+  max-height: 300px;
+  width: 100%; /* Ensure the image takes full width */
+  object-fit: cover;
+  border-radius: 8px; /* Add rounded corners */
+}
+
+.modal-content h2, .modal-content p {
+  margin-top: 10px;
+  color: #000;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #780a0a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+  background-color: #DEAC80;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 15px;
+    width: 95%;
+    max-width: 95%;
+  }
+
+  .modal-content h2 {
+    font-size: 1.5rem; /* Smaller font size for smaller screens */
+  }
+
+  .modal-content p {
+    font-size: 1rem; /* Adjust paragraph font size */
+  }
+
+  .modal-content img {
+    max-height: 200px; /* Reduce max height for images on smaller screens */
+  }
+
+  .modal-content button {
+    width: 100%; /* Full-width button for easier access on mobile */
+    padding: 12px;
+  }
+}

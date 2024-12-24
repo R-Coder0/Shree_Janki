@@ -1,0 +1,341 @@
+.about-page {
+  font-family: 'Arial, sans-serif';
+  background-color: #ffffff; /* White background for contrast */
+}
+
+.header {
+  position: relative;
+  height: 500px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5); /* Add depth */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #ffffff; /* White text */
+}
+
+.header-content h1 {
+  font-size: 5rem;
+  margin: 0;
+  color: #FF6F61; /* Bright red for the heading */
+}
+
+.header-content p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  max-width: 600px;
+  line-height: 1.4;
+  color: #ffffff; /* White text */
+}
+
+.content {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #FF6F61; /* Red background for content */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  color: #ffffff; /* White text */
+}
+
+.story-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  transition: transform 0.3s; /* Add animation */
+}
+
+.story-section:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+}
+
+.story-image {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.story-image img {
+  height: auto;
+  width: 100%;
+  border-radius: 15px; /* Soft rounded corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s; /* Add animation */
+}
+
+.story-image img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.story-content {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.story-content h2 {
+  font-size: 2.8rem;
+  color: #ffffff; /* White text */
+  margin-bottom: 20px;
+  text-align: left;
+  border-left: 5px solid #FFDF00; /* Gold accent border */
+  padding-left: 15px;
+}
+
+.story-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #f4f4f4;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.sub-point h3, .stat h3 {
+  text-transform: uppercase;
+}
+.sub-points {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sub-point {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sub-point img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+}
+
+.sub-point img:hover {
+  transform: rotate(15deg); /* Rotate on hover */
+}
+
+.sub-point h3 {
+  font-size: 1.6rem;
+  color: #ffffff; /* White text */
+  margin: 0;
+}
+
+.sub-point p {
+  font-size: 1rem;
+  color: #f4f4f4; /* Light gray text */
+  margin: 5px 0 0;
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding: 30px 0;
+  background-color: #FFDF00; /* Gold background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stat {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #333333; /* Dark text for contrast */
+}
+
+.stat h3 {
+  font-size: 1rem;
+  color: #333333; /* Dark text */
+  margin-bottom: 5px;
+}
+
+.team {
+  margin-top: 50px;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.team-member {
+  text-align: center;
+  flex: 1 1 220px;
+  max-width: 250px;
+  padding: 20px;
+  border-radius: 15px; /* Soft rounded corners */
+  background: #ffffff; /* White background */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  transition: transform 0.3s;
+  color: #333333; /* Dark text */
+}
+
+.team-member:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  font-size: 1.6rem;
+  color: #333333; /* Dark text */
+  margin: 10px 0 5px;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #666666; /* Gray text */
+  margin: 5px 0;
+}
+
+.approach-section {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.approach-content {
+  flex: 2;
+  padding-right: 20px;
+}
+
+.approach-content h2 {
+  font-size: 2.8rem;
+  color: #ffffff; /* White text */
+  margin-bottom: 20px;
+  text-align: left;
+  border-left: 5px solid #FFDF00; /* Gold accent border */
+  padding-left: 15px;
+}
+
+.approach-content blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #f4f4f4; /* Light gray text */
+  margin-bottom: 20px;
+  border-left: 5px solid #FFDF00; /* Gold accent border */
+  padding-left: 15px;
+}
+
+.approach-content .highlight {
+  background: #FFDF00; /* Gold highlight background */
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.approach-content .highlight p {
+  font-size: 1rem;
+  color: #333333; /* Dark text */
+  margin: 0;
+}
+
+.approach-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #f4f4f4; /* Light gray text */
+}
+
+.approach-image {
+  flex: 1;
+  animation: fadeIn 0.5s ease; /* Fade-in animation */
+}
+
+.approach-image img {
+  width: 100%; /* Make responsive */
+  border-radius: 10px;
+  height: auto; /* Adjust height */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .header {
+    height: 300px;
+  }
+
+  .overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .story-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .story-image img {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .sub-points {
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .statistics {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat {
+    flex: 1 1 auto;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .team-members {
+    flex-direction: column;
+    margin: 0 40px 0 40px;
+  }
+
+  .approach-section {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    text-align: center; /* Center text */
+  }
+
+  .approach-image {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+.navbar {
+  background-color: white; /* Dark Red background */
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #b92422; /* Bright Orange-Red border */
+  height: 70px;
+  position: fixed; /* Make navbar fixed to the top */
+  width: 100%; /* Ensure the navbar spans the full width */
+  top: 0; /* Align it to the top */
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+}
+
+.navbar-brand .navbar-logo {
+  height: 80px; /* Adjusted height for logo */
+  width: auto;
+  margin-right: 15px; /* Add some space between logo and text (if any) */
+}
+
+.navbar-toggle {
+  display: none; /* Initially hide for desktop */
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 30px;
+  height: 5px;
+  background-color: #b92422; 
+  margin: 4px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+}
+
+.open .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 2rem; 
+  z-index: 1000;
+  margin: 10px; 
+}
+
+.nav-item {
+  padding: 10px 15px; 
+  border-radius: 4px;
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.nav-item:hover {
+  background-color: #8B0000; /* Darker Red on hover for a subtle effect */
+}
+
+.nav-link {
+  color: #000; /* White text */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Mukta", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 50px; /* Vertically center-align the text within the navbar */
+}
+
+.nav-link:hover {
+  color: #b92422; /* Bright Orange-Red hover effect */
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    display: none; /* Initially hide for mobile */
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    top: 70px; /* Adjusted to match new navbar height */
+    right: 0;
+    background-color: #fff; /* Dark Red for mobile menu */
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .navbar-brand .navbar-logo {
+    height: 70px;
+    width: auto;
+  }
+
+  .navbar-nav.open {
+    display: flex; /* Show menu when open */
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    text-align: center;
+    padding: 1rem;
+    display: block;
+    border-bottom: 1px solid #b92422; /* Bright Orange-Red underline for mobile nav items */
+  }
+
+  .navbar-toggle {
+    display: block; /* Show toggle button for mobile */
+  }
+}
+
+/* Ensure the hero section is below the navbar */
+.hero-section {
+  position: relative;
+  z-index: 1; /* Ensure hero section is below the navbar */
+  margin-top: 70px; /* Adjust for fixed navbar */
+}
+
+/* Additional Styling for Hover and Interaction */
+.nav-item:hover .nav-link {
+  color: #FFFFFF; /* Maintain white text on hover */
+}
+
+.nav-link.active {
+  color: #FF4500; /* Highlight active link in bright orange-red */
+  border-bottom: 2px solid #FF4500; /* Add underline to active link */
+}
+
+/* Add a subtle animation to the navbar on scroll */
+.navbar.scrolled {
+  background-color: #8B0000; /* Slightly darker shade when scrolled */
+  transition: background-color 0.3s ease;
+}
